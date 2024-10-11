@@ -1,0 +1,39 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node -r ./scripts/env src/server.js | bunyan -o short -l info",
+    "start:prod": "cross-env NODE_ENV=production node -r ./scripts/env src/server.js | bunyan -o short -l info",
+    "sequelize": "sequelize",
+    "sequelize:prod": "cross-env NODE_ENV=production sequelize"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "bunyan": "^1.8.15",
+    "connect-session-sequelize": "^7.1.7",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "fs": "^0.0.1-security",
+    "helmet": "^7.1.0",
+    "identicon": "^3.1.1",
+    "lodash.merge": "^4.6.2",
+    "masto": "^6.7.2",
+    "morgan": "^1.10.0",
+    "node-schedule": "^2.1.1",
+    "on-finished": "^2.4.1",
+    "path": "^0.12.7",
+    "sequelize": "^6.37.2",
+    "sqlite3": "^5.1.7",
+    "uuid": "^9.0.1",
+    "yup": "^1.4.0"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.6.2"
+  }
+}
